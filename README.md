@@ -5,4 +5,4 @@ For more information
 [#2](https://pekopoko4control.blogspot.com/2024/10/for-arduino-uno-r3.html)
 
 # Lisence
-This project is licensed under the MIT License, see the LICENSE.txt file for details
+This software is licensed under the MIT License, see the LICENSE.txt file for details
