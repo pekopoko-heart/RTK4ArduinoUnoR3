@@ -17,11 +17,14 @@ Arduino UNO R3上で実用的に動作し、Arduino IDE環境で使えるリア�
 
 - リアルタイムカーネルのコードサイズ：644 Byte
 - スタック：タスクの起動時に6Byteを追加で使用。
-　スタックは１本です。タスク毎にスタックを確保する必要はありません。
+
+  スタックは１本です。タスク毎にスタックを確保する必要はありません。
 - スタック以外：タスク数(TASK_MAX)×7+6 Byte
-　タスク毎にTCBの7ByteとSCBの6Byte
+
+  タスク毎にTCBの7ByteとSCBの6Byte
 - タスク切り替え時間
-　Arduino IDEの micros() でタスクの切り替え時間を計測：8～16μsec。
+
+  Arduino IDEの micros() でタスクの切り替え時間を計測：8～16μsec。
 
 このリアルタイム・カーネルでは、優先順位が最も高いタスクが下位のタスクに一時的に実行権を渡す
 WAIT 状態はサポートしていません。この機能制限により、タスク毎にスタックを準備する必要がなくなり、
@@ -48,9 +51,12 @@ void task_create(void(*task)(void), unsigned char id, unsigned char level); // �
 
  #define  TASK_MAX  4
 
- #define  taskId_10ms	0
- #define  taskId_100ms	1
+ #define  taskId_10ms	   0
+ 
+ #define  taskId_100ms	  1
+ 
  #define  taskId_1s	    	2
+ 
  #define  taskId_bg   	 	3
 
 setup()で、task_create( 関数名, Task ID, 優先順位 ) によりタスクを生成します。
@@ -68,5 +74,6 @@ setup()で、task_create( 関数名, Task ID, 優先順位 ) によりタスク�
 リアルタイム・カーネルの優先制御により、優先順位に従った多重処理(マルチタスク)が実施されます。
 
 ## ライセンス
-このソフトウエアはMITライセンスの下でライセンスされます。詳細は[LICENSE](LICENSE)ファイルをご覧ください。
+このソフトウエアはMITライセンスの下でライセンスされます。詳細は[LICENSE](https://github.com/pekopoko-heart/RTKernel-for-Arduino-Uno-R3/blob/main/LISENCE.txt)ファイルをご覧ください。
+
 This software is licensed under the MIT License, see the LICENSE.txt file for details
