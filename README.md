@@ -65,9 +65,13 @@ setup()で、task_create( 関数名, Task ID, 優先順位 ) によりタスク�
 優先順位は、値が大きい方が優先順位が高くなります。このアプリケーションの例では、優先順位を
 　task_10ms > task_100ms > task_1s > task_bg
 としています。
+  
   task_create(task_10ms, taskId_10ms, 8);
+  
   task_create(task_100ms, taskId_100ms, 6);
+  
   task_create(task_1s, taskId_1s, 4);
+  
   task_create(task_bg, taskId_bg, 2);
 
 次に必要なタイミングで task_sw(Task ID) で各タスクを起動します。
