@@ -1,6 +1,6 @@
 # Real-time kernel for Arduino UNO R3
 Arduino UNO R3上で実用的に動作し、Arduino IDE環境で使えるリアルタイム・カーネルです。  
-コードサイズ 644 Byte でプリエンプティブなマルチタスク環境を実現します。
+コードサイズ 644 Byte でプリエンプティブなマルチタスク環境を実現します。  
 A real-time kernel that runs practically on the Arduino UNO R3 and can be used in the  
 Arduino IDE environment. With a code size of 644 Bytes, it enables a preemptive  
 multitasking environment.  
