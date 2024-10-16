@@ -34,7 +34,7 @@ For more information
 [#1](https://pekopoko4control.blogspot.com/2024/09/arduino-uno.html)
 [#2](https://pekopoko4control.blogspot.com/2024/10/for-arduino-uno-r3.html)
 
-![dispatch]()
+![dispatch](https://github.com/pekopoko-heart/Real-Time-Kernel-for-Arduino-Uno-R3/blob/main/dispatch.png)
 
 ## 利用方法
 下記の2つのソースファイルを Arduino IDE のフォルダに置けば Arduino IDE で利用可能です。  
