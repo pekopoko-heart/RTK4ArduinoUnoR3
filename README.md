@@ -33,7 +33,7 @@ For more information
 
 ## 利用方法
 下記の2つのソースファイルを Arduino IDE のフォルダに置けば Arduino IDE で利用可能です。  
-　RTK4ArduinoUnoR3.ino
+　RTK4ArduinoUnoR3.ino  
 　example2.ino
 
 RTK4ArduinoUnoR3.ino はリアルタイム・カーネルのコードです。  
@@ -41,26 +41,27 @@ example2.ino はアプリケーションの例です。
 このアプリケーションでは、タイマー割り込みから3つ、バックグラウンドのタスクを1つ起動しています。
 
 コードの先頭で、リアルタイム・カーネルの関数をプロトタイプ宣言しています。  
- void task_sw(unsigned char no);	// タスク起動要求  
- void task_create(void(*task)(void), unsigned char id, unsigned char level); // タスク生成
+　void task_sw(unsigned char no);	// タスク起動要求  
+　void task_create(void(*task)(void), unsigned char id, unsigned char level); // タスク生成
 
 次にタスクの最大定義数と、タスクIDの定義をします。タスクIDは 0～1(TASK_MAX-1)の数値です。  
- #define  TASK_MAX  4  
+ 　#define  TASK_MAX  4  
  
- #define  taskId_10ms	   0   
- #define  taskId_100ms	  1   
- #define  taskId_1s	    	2  
- #define  taskId_bg   	 	3  
+ 　#define  taskId_10ms	   0   
+ 　#define  taskId_100ms	  1   
+ 　#define  taskId_1s	    	2  
+ 　#define  taskId_bg   	 	3  
 
 setup()で、task_create( 関数名, Task ID, 優先順位 ) によりタスクを生成します。  
 タスクは関数で定義します。  
 優先順位は、値が大きい方が優先順位が高くなります。このアプリケーションの例では、優先順位を  
 　task_10ms > task_100ms > task_1s > task_bg  
 としています。  
-  task_create(task_10ms, taskId_10ms, 8);  
-  task_create(task_100ms, taskId_100ms, 6);  
-  task_create(task_1s, taskId_1s, 4);  
-  task_create(task_bg, taskId_bg, 2);  
+
+　task_create(task_10ms, taskId_10ms, 8);  
+　task_create(task_100ms, taskId_100ms, 6);  
+　task_create(task_1s, taskId_1s, 4);  
+　task_create(task_bg, taskId_bg, 2);  
 
 次に必要なタイミングで task_sw(Task ID) で各タスクを起動します。  
 リアルタイム・カーネルの優先制御により、優先順位に従った多重処理(マルチタスク)が実施されます。  
