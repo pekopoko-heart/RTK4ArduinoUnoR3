@@ -44,7 +44,7 @@ example2.ino はアプリケーションの例です。
 　void task_sw(unsigned char no);	// タスク起動要求  
 　void task_create(void(*task)(void), unsigned char id, unsigned char level); // タスク生成
 
-次にタスクの最大定義数と、タスクIDの定義をします。タスクIDは 0～1(TASK_MAX-1)の数値です。  
+次にタスクの最大定義数と、タスクIDの定義をします。タスクIDは 0～(TASK_MAX-1)の数値です。  
  　#define  TASK_MAX  4  
  
  　#define  taskId_10ms	   0   
