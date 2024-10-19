@@ -74,7 +74,7 @@ setup()で、task_create( 関数名, Task ID, 優先順位 ) によりタスク�
 　task_sw(Task ID);  
 
 により各タスクを起動するだけです。  
-これで、リアルタイム・カーネルの優先制御による優先順位に従った多重処理(マルチタスク)が実施されます。  
+これで、リアルタイム・カーネルの優先制御により優先順位に従った多重処理(マルチタスク)が実施されます。  
 
 ## ライセンス
 このソフトウエアはMITライセンスの下でライセンスされます。詳細は[LICENSE](https://github.com/pekopoko-heart/RTKernel-for-Arduino-Uno-R3/blob/main/LISENCE.txt)ファイルをご覧ください。  
