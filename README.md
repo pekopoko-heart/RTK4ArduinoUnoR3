@@ -13,7 +13,7 @@ IDE environment. With a code size of 644 Bytes, it enables a preemptive multitas
 Arduino UNO R3上で実用的に動作し、Arduino IDE環境で使えるリアルタイム・カーネルです。  
 リアルタイム・カーネルは、各タスクに設定した優先順位により、各タスクを停止 (STOP)、実行 (RUN)、  
 実行可能 (READY)、中断 (SUSPEND)の4つのステータスで管理し、イベントにより起動を要求された  
-タスクの中で、最も優先順位の高いタスクに実行権を与えタスクを切り替えます。
+タスクの中で、最も優先順位の高いタスクに実行権を与えタスクを切り替えます。  
 This real-time kernel runs practically on Arduino UNO R3 and can be used in the Arduino IDE  
 environment. Depending on the priority set, each task is managed with 4 statuses: stopped (STOP),   
 running (RUN), ready to run (READY), and suspended (SUSPEND).  
@@ -21,23 +21,16 @@ The real-time kernel grants execution privilege to the task with the highest pri
 that have requested to be started.
 
 このリアルタイム・カーネルは、優先制御のオーバーヘッドと消費するROM/RAMを最小としながら、  
-プリエンプティブなマルチタスク環境を実現します。
+プリエンプティブなマルチタスク環境を実現します。  
 This real-time kernel provides a preemptive multitasking environment. And it has minimal priority  
 control overhead and consumes minimal ROM/RAM size.
 
-- リアルタイムカーネルのコードサイズ：644 Byte  
-  Real-time kernel code size: 644 Bytes
-- スタック：タスクの起動時に6Byteを追加で使用。
-  Stack: 6Byte additional at startup of task.  
-  スタックは１本です。タスク毎にスタックを確保する必要はありません。  
+- Real-time kernel code size: 644 Bytes
+- Stack: 6Byte additional at startup of task.  
   Only one stack is required. There is no need to reserve a stack for each task.
-- スタック以外：タスク数(TASK_MAX)×7+6 Byte  
-  Non-stack: Number of tasks (TASK_MAX)×7+6 Byte  
-  タスク毎にTCBの7ByteとSCBの6Byte  
+- Non-stack: Number of tasks (TASK_MAX)×7+6 Byte  
   7Byte of TCB and 6Byte of SCB per task  
-- タスク切り替え時間  
-  Task switching time  
-  Arduino IDEの micros() でタスクの切り替え時間を計測：8～16μsec。  
+- Task switching time  
   Measure task switching time with micros() in Arduino IDE: 8 to 16 μsec.  
 
 このリアルタイム・カーネルでは、優先順位が最も高いタスクが下位のタスクに一時的に実行権を渡す  
