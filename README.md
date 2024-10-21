@@ -29,13 +29,17 @@ control overhead and consumes minimal ROM/RAM size.
 - Stack: 6Byte additional at startup of task.  
   Only one stack is required. There is no need to reserve a stack for each task.
 - Non-stack: Number of tasks (TASK_MAX)×7+6 Byte  
-  7Byte of TCB and 6Byte of SCB per task  
+  7Byte of TCB per task and 6Byte of SCB  
 - Task switching time  
   Measure task switching time with micros() in Arduino IDE: 8 to 16 μsec.  
 
 このリアルタイム・カーネルでは、優先順位が最も高いタスクが下位のタスクに一時的に実行権を渡す  
 WAIT 状態はサポートしていません。この機能制限により、タスク毎にスタックを準備する必要がなくなり、  
-最低限のレジスタの退避のみでタスクの切り替えを実現します。
+最低限のレジスタの退避のみでタスクの切り替えを実現します。  
+This real-time kernel does not support the WAIT state. WAIT is a state in which the highest-priority  
+task temporarily passes execution privilege to a lower-priority task.  
+This limitation eliminates the need for a dedicated stack for each task.
+Therefore, this real-time kernel achieves task switching with only minimal register saving.  
 
 For more information
 [#1](https://pekopoko4control.blogspot.com/2024/09/arduino-uno.html)
