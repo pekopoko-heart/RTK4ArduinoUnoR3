@@ -6,10 +6,10 @@ IDE environment. With a code size of 644 Bytes, it enables a preemptive multitas
 コードサイズ 644 Byte でプリエンプティブなマルチタスク環境を実現します。)  
 
 ## Contents (目次)
-- Overview (概要)
-- Dispatch Sequence
-- How to use (利用方法)
-- License (ライセンス)
+- [Overview (概要)](https://github.com/pekopoko-heart/Real-Time-Kernel-for-Arduino-Uno-R3/blob/main/README.md#overview%E6%A6%82%E8%A6%81)
+- [Dispatch Sequence](https://github.com/pekopoko-heart/Real-Time-Kernel-for-Arduino-Uno-R3/blob/main/README.md#dispatch-sequence)
+- [How to use (利用方法)](https://github.com/pekopoko-heart/Real-Time-Kernel-for-Arduino-Uno-R3/blob/main/README.md#how-to-use-%E5%88%A9%E7%94%A8%E6%96%B9%E6%B3%95)
+- [License (ライセンス)](https://github.com/pekopoko-heart/Real-Time-Kernel-for-Arduino-Uno-R3/blob/main/README.md#license-%E3%83%A9%E3%82%A4%E3%82%BB%E3%83%B3%E3%82%B9)
 
 ## Overview　(概要)
 
