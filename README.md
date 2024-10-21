@@ -5,13 +5,13 @@ IDE environment. With a code size of 644 Bytes, it enables a preemptive multitas
 (Arduino UNO R3上で実用的に動作し、Arduino IDE環境で使えるリアルタイム・カーネルです。  
 コードサイズ 644 Byte でプリエンプティブなマルチタスク環境を実現します。)  
 
-## Contents (目次)
-- [Overview](#Overview)
+## Contents 目次
+- [Overview 概要](#Overview 概要)
 - [Dispatch Sequence](#Dispatch Sequence)
-- [How to use (利用方法)](#How to use (利用方法))
-- [License](#License)
+- [How to use 利用方法](#How to use 利用方法)
+- [License ライセンス](#License ライセンス)
 
-## Overview (概要)
+## Overview 概要
 
 This real-time kernel runs practically on Arduino UNO R3 and can be used in the Arduino IDE  
 environment. Depending on the priority set, each task is managed with 4 statuses: stopped (STOP),   
@@ -51,7 +51,7 @@ For more information
 ## Dispatch Sequence
 ![dispatch](https://github.com/pekopoko-heart/Real-Time-Kernel-for-Arduino-Uno-R3/blob/main/dispatch.png)
 
-## How to use (利用方法)
+## How to use 利用方法
 The following two source files are available in the Arduino IDE environment.  
 (下記の2つのソースファイルは Arduino IDE で利用可能です。)  
 
@@ -104,6 +104,6 @@ Simply start each task by
 Just this, Multitasking is performed under the priority control of the real-time kernel.   
 これで、リアルタイム・カーネルの優先制御により優先順位に従った多重処理(マルチタスク)が実施されます。  
 
-## License (ライセンス)
+## License ライセンス
 This software is licensed under the MIT License, see the [LICENSE.txt](https://github.com/pekopoko-heart/RTKernel-for-Arduino-Uno-R3/blob/main/LISENCE.txt) file for details.  
 このソフトウエアはMITライセンスの下でライセンスされます。詳細は LICENSE.txt をご覧ください。  
