@@ -6,10 +6,10 @@ IDE environment. With a code size of 644 Bytes, it enables a preemptive multitas
 コードサイズ 644 Byte でプリエンプティブなマルチタスク環境を実現します。)  
 
 ## Contents (目次)
-- [Overview (概要)](#Overview (概要))
+- [Overview](#Overview)
 - [Dispatch Sequence](#Dispatch Sequence)
 - [How to use (利用方法)](#How to use (利用方法))
-- [License (ライセンス)](#License (ライセンス))
+- [License](#License)
 
 ## Overview (概要)
 
