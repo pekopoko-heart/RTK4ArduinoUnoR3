@@ -69,7 +69,7 @@ At the beginning of the code, two functions of the real-time kernel are declared
 (コードの先頭で、リアルタイム・カーネルの2つの関数をプロトタイプ宣言しています。)  
 
 &nbsp;&nbsp;&nbsp;&nbsp;**void task_sw(unsigned char no);**  
-&nbsp;&nbsp;&nbsp;&nbsp;**void task_create(void(*task)(void), unsigned char id, unsigned char level);**
+&nbsp;&nbsp;&nbsp;&nbsp;**void task_create(void(\*task)(void), unsigned char id, unsigned char level);**
 
 Next, define the number of tasks and the task ID. The task ID is a number from 0 to (TASK_MAX-1).  
 (次にタスクの定義数と、タスクIDを定義しています。タスクIDは 0～(TASK_MAX-1)の数値です。)  
