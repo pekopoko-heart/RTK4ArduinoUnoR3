@@ -6,12 +6,12 @@ IDE environment. With a code size of 644 Bytes, it enables a preemptive multitas
 コードサイズ 644 Byte でプリエンプティブなマルチタスク環境を実現します。)  
 
 ## Contents 目次
-- [Overview 概要](#Overview 概要)
-- [Dispatch Sequence](#Dispatch Sequence)
-- [How to use 利用方法](#How to use 利用方法)
+- [Overview 概要](#Overview概要)
+- [Dispatch Sequence](#DispatchSequence)
+- [How to use 利用方法](#Howtouse利用方法)
 - [License ライセンス](#License ライセンス)
 
-## Overview 概要
+## Overview　概要
 
 This real-time kernel runs practically on Arduino UNO R3 and can be used in the Arduino IDE  
 environment. Depending on the priority set, each task is managed with 4 statuses: stopped (STOP),   
