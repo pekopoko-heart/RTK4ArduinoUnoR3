@@ -38,7 +38,7 @@ WAIT 状態はサポートしていません。この機能制限により、タ
 最低限のレジスタの退避のみでタスクの切り替えを実現します。  
 This real-time kernel does not support the WAIT state. WAIT is a state in which the highest-priority  
 task temporarily passes execution privilege to a lower-priority task.  
-This limitation eliminates the need for a dedicated stack for each task.
+This limitation eliminates the need for a dedicated stack for each task.  
 Therefore, this real-time kernel achieves task switching with only minimal register saving.  
 
 For more information
