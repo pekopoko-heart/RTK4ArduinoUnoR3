@@ -48,10 +48,10 @@ For more information
 [#1](https://pekopoko4control.blogspot.com/2024/09/arduino-uno.html)
 [#2](https://pekopoko4control.blogspot.com/2024/10/for-arduino-uno-r3.html)
 
-## Dispatch Sequence
+## DispatchSequence
 ![dispatch](https://github.com/pekopoko-heart/Real-Time-Kernel-for-Arduino-Uno-R3/blob/main/dispatch.png)
 
-## How to use 利用方法
+## Howtouse利用方法
 The following two source files are available in the Arduino IDE environment.  
 (下記の2つのソースファイルは Arduino IDE で利用可能です。)  
 
