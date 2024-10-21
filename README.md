@@ -50,18 +50,24 @@ For more information
 
 ## 利用方法
 下記の2つのソースファイルを Arduino IDE のフォルダに置けば Arduino IDE で利用可能です。  
+The following two source files are available in the Arduino IDE environment.  
 　RTK4ArduinoUnoR3.ino  
 　example2.ino
 
 RTK4ArduinoUnoR3.ino はリアルタイム・カーネルのコードです。  
 example2.ino はアプリケーションの例です。  
-このアプリケーションでは、タイマー割り込みから3つ、バックグラウンドのタスクを1つ起動しています。
+RTK4ArduinoUnoR3.ino is the real-time kernel code.  
+example2.ino is an example application.  
+このアプリケーションでは、タイマー割り込みから3つ、バックグラウンドのタスクを1つ起動しています。  
+The application launches three tasks from timer interrupts and one background task.  
 
 コードの先頭で、リアルタイム・カーネルの2つの関数をプロトタイプ宣言しています。  
+At the beginning of the code, two functions of the real-time kernel are declared as prototypes.  
 　void task_sw(unsigned char no);	// タスク起動要求  
 　void task_create(void(*task)(void), unsigned char id, unsigned char level); // タスク生成
 
 次にタスクの定義数と、タスクIDを定義しています。タスクIDは 0～(TASK_MAX-1)の数値です。  
+Next, define the number of tasks and the task ID. The task ID is a number from 0 to (TASK_MAX-1).  
  　#define  TASK_MAX  4  
  
  　#define  taskId_10ms	   0   
@@ -70,8 +76,12 @@ example2.ino はアプリケーションの例です。
  　#define  taskId_bg   	 	3  
 
 setup()で、task_create( 関数名, Task ID, 優先順位 ) によりタスクを生成します。  
-タスクは関数で定義し、優先順位の値が大きい方が優先順位が高くなります。このアプリケーションの例では、  
-優先順位を  
+タスクは関数で定義し、優先順位の値が大きい方が優先順位が高くなります。  
+In setup(), tasks are created by task_create( function name, Task ID, priority ).   
+Tasks are defined by functions, and the higher the value, the higher the priority.  
+
+このアプリケーションの優先順位は、  
+The priority of this application is,  
 　task_10ms > task_100ms > task_1s > task_bg  
 としています。  
 
@@ -81,11 +91,13 @@ setup()で、task_create( 関数名, Task ID, 優先順位 ) によりタスク�
 　task_create(task_bg, taskId_bg, 2);  
 
 次に割り込み処理など、必要なタイミングで  
+Then, at the necessary timing, such as interrupt processing,   
   
-　task_sw(Task ID);  
+task_sw(Task ID);  により各タスクを起動するだけです。  
+Simply start each task by task_sw(Task ID);  
 
-により各タスクを起動するだけです。  
 これで、リアルタイム・カーネルの優先制御により優先順位に従った多重処理(マルチタスク)が実施されます。  
+Multitasking is performed under the priority control of the real-time kernel.   
 
 ## ライセンス
 このソフトウエアはMITライセンスの下でライセンスされます。詳細は[LICENSE](https://github.com/pekopoko-heart/RTKernel-for-Arduino-Uno-R3/blob/main/LISENCE.txt)ファイルをご覧ください。  
