@@ -68,37 +68,37 @@ The application launches three tasks from timer interrupts and one background ta
 At the beginning of the code, two functions of the real-time kernel are declared as prototypes.  
 (コードの先頭で、リアルタイム・カーネルの2つの関数をプロトタイプ宣言しています。)  
 
-　void task_sw(unsigned char no);	// タスク起動要求  
-　void task_create(void(*task)(void), unsigned char id, unsigned char level); // タスク生成
+&nbsp;&nbsp;&nbsp;&nbsp;void task_sw(unsigned char no);	// タスク起動要求  
+&nbsp;&nbsp;&nbsp;&nbsp;void task_create(void(*task)(void), unsigned char id, unsigned char level); // タスク生成
 
 Next, define the number of tasks and the task ID. The task ID is a number from 0 to (TASK_MAX-1).  
 (次にタスクの定義数と、タスクIDを定義しています。タスクIDは 0～(TASK_MAX-1)の数値です。)  
 
- 　#define  TASK_MAX  4  
+&nbsp;&nbsp;&nbsp;&nbsp;**#define  TASK_MAX    4**  
  
- 　#define  taskId_10ms	   0   
- 　#define  taskId_100ms	  1   
- 　#define  taskId_1s	    	2  
- 　#define  taskId_bg   	 	3  
+&nbsp;&nbsp;&nbsp;&nbsp;**#define  taskId_10ms    0**   
+&nbsp;&nbsp;&nbsp;&nbsp;**#define  taskId_100ms   1**   
+&nbsp;&nbsp;&nbsp;&nbsp;**#define  taskId_1s      2**  
+&nbsp;&nbsp;&nbsp;&nbsp;**#define  taskId_bg      3**  
 
 In setup(), tasks are created by task_create( function name, Task ID, priority ).   
 (setup()で、task_create( 関数名, Task ID, 優先順位 ) によりタスクを生成します。)
 
-　task_create(task_10ms, taskId_10ms, 8);  
-　task_create(task_100ms, taskId_100ms, 6);  
-　task_create(task_1s, taskId_1s, 4);  
-　task_create(task_bg, taskId_bg, 2);  
+&nbsp;&nbsp;&nbsp;&nbsp;**task_create(task_10ms, taskId_10ms, 8);**  
+&nbsp;&nbsp;&nbsp;&nbsp;**task_create(task_100ms, taskId_100ms, 6);**  
+&nbsp;&nbsp;&nbsp;&nbsp;**task_create(task_1s, taskId_1s, 4);**  
+&nbsp;&nbsp;&nbsp;&nbsp;**task_create(task_bg, taskId_bg, 2);**  
 
 Tasks are defined by functions, and the higher the value, the higher the priority.  
 (タスクは関数で定義し、優先順位の値が大きい方が優先順位が高くなります。)  
 The priority of this application is,(このアプリケーションの優先順位は)  
-　task_10ms > task_100ms > task_1s > task_bg  
+&nbsp;&nbsp;&nbsp;&nbsp;task_10ms > task_100ms > task_1s > task_bg  
 
 Then, at the necessary timing, such as interrupt processing,   
 Simply start each task by  
 (次に割り込み処理など、必要なタイミングで各タスクを起動するだけです。)  
 
-  **task_sw(Task ID);**  
+&nbsp;&nbsp;&nbsp;&nbsp;**task_sw(Task ID);**  
 
 Just this, Multitasking is performed under the priority control of the real-time kernel.   
 これで、リアルタイム・カーネルの優先制御により優先順位に従った多重処理(マルチタスク)が実施されます。  
