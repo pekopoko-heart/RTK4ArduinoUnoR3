@@ -53,8 +53,9 @@ For more information
 ## 利用方法
 The following two source files are available in the Arduino IDE environment.  
 (下記の2つのソースファイルは Arduino IDE で利用可能です。)  
-&nbsp;&nbsp;RTK4ArduinoUnoR3.ino  
-&nbsp;&nbsp;example2.ino
+
+&nbsp;&nbsp;&nbsp;&nbsp;RTK4ArduinoUnoR3.ino  
+&nbsp;&nbsp;&nbsp;&nbsp;example2.ino
 
 RTK4ArduinoUnoR3.ino is the real-time kernel code.  
 example2.ino is an example application.  
