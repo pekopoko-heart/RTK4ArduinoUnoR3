@@ -100,7 +100,7 @@ Then, at the necessary timing, such as interrupt processing, Simply start each t
 
 &nbsp;&nbsp;&nbsp;&nbsp;**task_sw(Task ID);**  
 
-<span style="color: red;">Just this, Multitasking is performed under the priority control of the real-time kernel.</span>   
+**Just this, Multitasking is performed under the priority control of the real-time kernel.**   
 (これで、リアルタイム・カーネルの優先制御により優先順位に従った多重処理(マルチタスク)が実施されます。)  
 
 ## License (ライセンス)
