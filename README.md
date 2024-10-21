@@ -68,8 +68,8 @@ The application launches three tasks from timer interrupts and one background ta
 At the beginning of the code, two functions of the real-time kernel are declared as prototypes.  
 (コードの先頭で、リアルタイム・カーネルの2つの関数をプロトタイプ宣言しています。)  
 
-&nbsp;&nbsp;&nbsp;&nbsp;void task_sw(unsigned char no);	// タスク起動要求  
-&nbsp;&nbsp;&nbsp;&nbsp;void task_create(void(*task)(void), unsigned char id, unsigned char level); // タスク生成
+&nbsp;&nbsp;&nbsp;&nbsp;**void task_sw(unsigned char no);**  
+&nbsp;&nbsp;&nbsp;&nbsp;**void task_create(void(*task)(void), unsigned char id, unsigned char level);**
 
 Next, define the number of tasks and the task ID. The task ID is a number from 0 to (TASK_MAX-1).  
 (次にタスクの定義数と、タスクIDを定義しています。タスクIDは 0～(TASK_MAX-1)の数値です。)  
@@ -91,7 +91,7 @@ In setup(), tasks are created by task_create( function name, Task ID, priority )
 
 Tasks are defined by functions, and the higher the value, the higher the priority.  
 (タスクは関数で定義し、優先順位の値が大きい方が優先順位が高くなります。)  
-The priority of this application is,(このアプリケーションの優先順位は)  
+The priority of this application is, (このアプリケーションの優先順位は)  
 &nbsp;&nbsp;&nbsp;&nbsp;task_10ms > task_100ms > task_1s > task_bg  
 
 Then, at the necessary timing, such as interrupt processing,   
