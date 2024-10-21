@@ -95,15 +95,14 @@ Tasks are defined by functions, and the higher the value, the higher the priorit
 The priority of this application is, (このアプリケーションの優先順位は)  
 &nbsp;&nbsp;&nbsp;&nbsp;task_10ms > task_100ms > task_1s > task_bg  
 
-Then, at the necessary timing, such as interrupt processing,   
-Simply start each task by  
+Then, at the necessary timing, such as interrupt processing, Simply start each task by  
 (次に割り込み処理など、必要なタイミングで各タスクを起動するだけです。)  
 
 &nbsp;&nbsp;&nbsp;&nbsp;**task_sw(Task ID);**  
 
-Just this, Multitasking is performed under the priority control of the real-time kernel.   
-これで、リアルタイム・カーネルの優先制御により優先順位に従った多重処理(マルチタスク)が実施されます。  
+**Just this, Multitasking is performed under the priority control of the real-time kernel.**   
+(これで、リアルタイム・カーネルの優先制御により優先順位に従った多重処理(マルチタスク)が実施されます。)  
 
 ## License (ライセンス)
 This software is licensed under the MIT License, see the [LICENSE.txt](https://github.com/pekopoko-heart/RTKernel-for-Arduino-Uno-R3/blob/main/LISENCE.txt) file for details.  
-このソフトウエアはMITライセンスの下でライセンスされます。詳細は LICENSE.txt をご覧ください。  
+(このソフトウエアはMITライセンスの下でライセンスされます。詳細は LICENSE.txt をご覧ください。)  
