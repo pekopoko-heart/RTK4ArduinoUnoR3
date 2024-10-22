@@ -91,7 +91,7 @@ In setup(), tasks are created by task_create( function name, Task ID, priority )
 &nbsp;&nbsp;&nbsp;&nbsp;**task_create(task_1s, taskId_1s, 4);**  
 &nbsp;&nbsp;&nbsp;&nbsp;**task_create(task_bg, taskId_bg, 2);**  
 
-Tasks are defined by functions, and the higher the value, the higher the priority.  
+Tasks are defined by functions, and the larger the priority value, the higher the priority.  
 (タスクは関数で定義し、優先順位の値が大きい方が優先順位が高くなります。)  
 The priority of this application is, (このアプリケーションの優先順位は)  
 &nbsp;&nbsp;&nbsp;&nbsp;task_10ms > task_100ms > task_1s > task_bg  
