@@ -52,8 +52,6 @@ For more information
 ## Dispatch Sequence
 ![dispatch](https://github.com/pekopoko-heart/Real-Time-Kernel-for-Arduino-Uno-R3/blob/main/dispatch.png)
 
-**Extremely simple, but a decently good RTOS. (超絶シンプルだが、がっつりRTOS)**  
-
 ## How to use (利用方法)
 The following two source files are available in the Arduino IDE environment.  
 (下記の2つのソースファイルは Arduino IDE で利用可能です。)  
@@ -141,6 +139,8 @@ Each task is executed without exiting.
 Multiple processing (multitasking) is being performed due to the priority control of  
 the real-time kernel.  
 (リアルタイムカーネルの優先制御により、多重処理(マルチタスク)が実施されています。)  
+
+**Extremely simple, but a decently good RTOS. (超絶シンプルだが、がっつりRTOS)**  
 
 ## License (ライセンス)
 This software is licensed under the MIT License, see the [LICENSE.txt](https://github.com/pekopoko-heart/RTKernel-for-Arduino-Uno-R3/blob/main/LISENCE.txt) file for details.  
