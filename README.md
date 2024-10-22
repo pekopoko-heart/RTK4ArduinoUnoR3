@@ -128,8 +128,8 @@ The total processing load per second is **900ms (90%)**.
 This is a condition where processing cannot be performed at the specified frequency  
 without appropriate priority setting and multiple processing (multitasking) according to  
 the priority order.
-(適切な優先順位の設定と、優先順位に従った多重処理(マルチタスク)が実施されなければ、処理が  
-規定頻度で実施できない条件です。)  
+(適切な優先順位の設定と、優先順位に従った多重処理(マルチタスク)が実施されなければ、  
+処理が規定頻度で実施できない条件です。)  
 
 You can check the number of times each task is executed per second on PC.  
 (PCで1秒ごとの各タスクの実行回数を確認できます。)  
