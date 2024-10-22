@@ -9,6 +9,7 @@ IDE environment. With a code size of 644 Bytes, it enables a preemptive multitas
 - [Overview (概要)](https://github.com/pekopoko-heart/Real-Time-Kernel-for-Arduino-Uno-R3/blob/main/README.md#overview%E6%A6%82%E8%A6%81)
 - [Dispatch Sequence](https://github.com/pekopoko-heart/Real-Time-Kernel-for-Arduino-Uno-R3/blob/main/README.md#dispatch-sequence)
 - [How to use (利用方法)](https://github.com/pekopoko-heart/Real-Time-Kernel-for-Arduino-Uno-R3/blob/main/README.md#how-to-use-%E5%88%A9%E7%94%A8%E6%96%B9%E6%B3%95)
+- [Let's check out example2.ino (example2.ino を確認してみよう)]()
 - [License (ライセンス)](https://github.com/pekopoko-heart/Real-Time-Kernel-for-Arduino-Uno-R3/blob/main/README.md#license-%E3%83%A9%E3%82%A4%E3%82%BB%E3%83%B3%E3%82%B9)
 
 ## Overview　(概要)
@@ -113,7 +114,7 @@ are invoked from timer interrupts with 10ms, 100ms, and 1s cycles.
 task_100ms()、task_1s()の３つのタスクを起動しています。)
 
 The three tasks only increment the counter, but each has the following processing load.  
-(3つのタスクでは、カウンタをインクリメントしているだけですが、それぞれ、下記の処理負荷になっています。)  
+(3つのタスクでは、カウンタをインクリメントしているだけですが、下記の処理負荷になっています。)  
 
 | processing cycle | task name | processing load | 
 |----------|----------|----------|
