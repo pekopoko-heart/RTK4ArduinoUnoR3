@@ -250,7 +250,7 @@ void task_create(void(*task) (void), unsigned char no, unsigned char level)
 
 void link_ready(unsigned char no)
 {
-    struct TCB* tcb1, * tcb2;
+    struct TCB *tcb1, *tcb2;
 
     // READY TASKが存在しない場合、タスク定義ナンバーで指定さ
     // れるタスクのTCBをレディリンクの先頭(スケジューラ コントロールブロック
@@ -301,7 +301,7 @@ void link_ready(unsigned char no)
 
 void link_suspend(unsigned char no)
 {
-    struct TCB* tcb1, * tcb2;
+    struct TCB *tcb1, *tcb2;
 
     // SUSPEND TASKが存在しない場合、タスク定義ナンバーで指定される
     // タスクのTCBをサスペンドリンクの先頭 (スケジューラコントロール
