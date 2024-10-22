@@ -103,6 +103,42 @@ Then, at the necessary timing, such as interrupt processing, Simply start each t
 **Just this, Multitasking is performed under the priority control of the real-time kernel.**   
 (これで、リアルタイム・カーネルの優先制御により優先順位に従った多重処理(マルチタスク)が実施されます。)  
 
+## Let's check out example2.ino (example2.ino を確認してみよう)
+Preemptive multitasking is necessary to efficiently use up processor performance.  
+(プリエンプティブなマルチタスク機能は効率的にプロセッサの性能を使い切る場合に必要になります。)  
+
+In the example2.ino application example, 3 tasks, task_10ms(), task_100ms(), and task_1s(),  
+are invoked from timer interrupts with 10ms, 100ms, and 1s cycles.  
+(example2.ino のアプリケーションの例では、10ms、100ms、1秒周期のタイマー割り込みからtask_10ms()と  
+task_100ms()、task_1s()の３つのタスクを起動しています。)
+
+The three tasks only increment the counter, but each has the following processing load.  
+(3つのタスクでは、カウンタをインクリメントしているだけですが、それぞれ、下記の処理負荷になっています。)  
+
+| processing cycle | task name | processing load | 
+|----------|----------|----------|
+| 10ms	| task_10ms()   |1ms |
+| 100ms	| task_100ms() |50ms |
+| 1sec	| task_1s()  |300ms |
+
+The total processing load per second is **900ms (90%)**.  
+(1秒間のトータルの処理負荷は900ms(90%)です。)  
+
+This is a condition where processing cannot be performed at the specified frequency  
+without appropriate priority setting and multiple processing (multitasking) according to  
+the priority order.
+(適切な優先順位の設定と、優先順位に従った多重処理(マルチタスク)が実施されなければ、処理が  
+規定頻度で実施できない条件です。)  
+
+You can check the number of times each task is executed per second on PC.  
+(PCで1秒ごとの各タスクの実行回数を確認できます。)  
+Each task is executed without exiting.  
+(各タスクは抜けることなく実行されます。)  
+
+Multiple processing (multitasking) is being performed due to the priority control of  
+the real-time kernel.  
+(リアルタイムカーネルの優先制御により、多重処理(マルチタスク)が実施されています。)  
+
 ## License (ライセンス)
 This software is licensed under the MIT License, see the [LICENSE.txt](https://github.com/pekopoko-heart/RTKernel-for-Arduino-Uno-R3/blob/main/LISENCE.txt) file for details.  
 (このソフトウエアはMITライセンスの下でライセンスされます。詳細は LICENSE.txt をご覧ください。)  
