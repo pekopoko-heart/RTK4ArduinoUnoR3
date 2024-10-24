@@ -143,7 +143,7 @@ the real-time kernel.
 **Without priority control.**  
 If the priority order of the 10ms, 100ms, and 1sec tasks is the same, it will behave like a  
 polling process. Since priority control is not available, the execution frequency is about  
-40% for the 10 ms task and about 70% for the 100 ms task.
+40% for the 10 ms task and about 70% for the 100 ms task.  
 In addition, the effective utilization rate of the processor dropped by about 20% to about 70%.
 
 It is clear that without appropriate priority setting and multiple processing (multitasking)  
