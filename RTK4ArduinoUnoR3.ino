@@ -18,13 +18,13 @@ struct TCB {
     void	(*task)(void);	  // タスクのエントリーアドレス
     unsigned char	no;		    // タスク定義番号
     unsigned char	level;		// タスクの優先順位 大きい方が優先順位が高い
-    struct	TCB* next;	    // TCB リンク
+    struct	TCB *next;	    // TCB リンク
 };
 
 struct SCB {
-    struct TCB* run;		    // RUN タスクのTCB アドレス
-    struct TCB* ready;		  // 最優先READY タスクの TCB アドレス 
-    struct TCB* suspend;	  // 最優先 SUSPEND タスクの TCB アドレス
+    struct TCB *run;		    // RUN タスクのTCB アドレス
+    struct TCB *ready;		  // 最優先READY タスクの TCB アドレス 
+    struct TCB *suspend;	  // 最優先 SUSPEND タスクの TCB アドレス
 };
 
 // 管理データ定義
