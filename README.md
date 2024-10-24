@@ -140,7 +140,8 @@ Multiple processing (multitasking) is being performed due to the priority contro
 the real-time kernel.  
 (リアルタイムカーネルの優先制御により、多重処理(マルチタスク)が実施されています。)  
 
-**Without priority control.**  
+### Without priority control
+
 If the priority order of the 10ms, 100ms, and 1sec tasks is the same, it will behave like a  
 polling process. Since priority control is not available, the execution frequency is about  
 40% for the 10 ms task and about 70% for the 100 ms task.  
