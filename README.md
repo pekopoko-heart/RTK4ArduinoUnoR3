@@ -140,7 +140,15 @@ Multiple processing (multitasking) is being performed due to the priority contro
 the real-time kernel.  
 (リアルタイムカーネルの優先制御により、多重処理(マルチタスク)が実施されています。)  
 
-**Extremely simple, but a decently good RTOS. (超絶シンプルだが、がっつりRTOS)**  
+Without priority control.
+If the priority order of the 10ms, 100ms, and 1sec tasks is the same, it will behave like a  
+polling process. Since priority control is not available, the execution frequency is about  
+40% for the 10 ms task and about 70% for the 100 ms task.
+In addition, the effective utilization rate of the processor dropped by about 20% to about 70%.
+
+It is clear that without appropriate priority setting and multiple processing (multitasking)  
+with priority control, processing will not be performed at the specified frequency and processor  
+performance will not be efficiently utilized.
 
 ## License (ライセンス)
 This software is licensed under the MIT License, see the [LICENSE.txt](https://github.com/pekopoko-heart/RTKernel-for-Arduino-Uno-R3/blob/main/LISENCE.txt) file for details.  
