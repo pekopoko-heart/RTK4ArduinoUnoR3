@@ -38,7 +38,7 @@ For more information
 
 ## Dispatch Sequence
 The dispatch process cleverly uses the stack to switch tasks and perform priority control.  
-It achieves extremely simple and real preemptive multitasking.  
+It achieves **extremely simple and real preemptive multitasking**.  
 
 ![dispatch](https://github.com/pekopoko-heart/Real-Time-Kernel-for-Arduino-Uno-R3/blob/main/dispatch.png)
 
